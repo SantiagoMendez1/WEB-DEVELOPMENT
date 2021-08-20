@@ -34,19 +34,24 @@
       <br />
       Sexo
       <br />
-      <input type="radio" name="hombre" value="" checked="checked"/>Hombre
+      <input type="radio" name="hombre" value="" checked="checked" />Hombre
       <br />
       <input type="radio" name="mujer" value="" />Mujer
       <br />
       <br />
       Incluir mi foto
       <br />
-      <input type="file" name="imagen" value="">
+      <input type="file" name="imagen" value="" />
       <br />
       <br />
-      <input type="checkbox" name="estudiante" value="" checked="checked"/>Estudiante...
+      <input
+        type="checkbox"
+        name="estudiante"
+        value=""
+        checked="checked"
+      />Estudiante...
       <br />
-      <fieldset >
+      <fieldset>
         <legend>Datos personales</legend>
         Departamento
         <br />
@@ -57,6 +62,25 @@
         <br />
         <br />
         Fecha de nacimiento
+        <br />
+        <input type="text" name="dia" value="" size="5" />
+        de
+        <select name="mes">
+          <option value="enero" selected>Enero</option>
+          <option value="febrero">Febrero</option>
+          <option value="marzo">Marzo</option>
+          <option value="abril">Abril</option>
+          <option value="Mayo">Mayo</option>
+          <option value="junio">Junio</option>
+          <option value="julio">Julio</option>
+          <option value="agosto">Agosto</option>
+          <option value="septiembre">Septiembre</option>
+          <option value="octubre">Octubre</option>
+          <option value="noviembre">Noviembre</option>
+          <option value="diciembre">Diciembre</option>
+        </select>
+        de
+        <input type="text" name="dia" value="" size="5" />
       </fieldset>
     </form>
   </body>
