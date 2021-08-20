@@ -6,7 +6,7 @@
   </head>
   <body>
     <h2>Rellena tu CV</h2>
-    <form action="index.html" method="post">
+    <form action="lista.html" method="post">
       Nombre
       <br />
       <input type="text" name="nombre" value="" />
@@ -51,7 +51,7 @@
         checked="checked"
       />Estudiante...
       <br />
-      <fieldset>
+      <fieldset style="width: 50%;">
         <legend>Datos personales</legend>
         Departamento
         <br />
@@ -81,7 +81,22 @@
         </select>
         de
         <input type="text" name="dia" value="" size="5" />
+        <br />
+        <br />
+        Temas de interés
+        <br />
+        <select name="interes" multiple="multiple">
+          <option value="admin_bd" selected
+            >Administracion de Bases de Datos</option
+          >
+          <option value="analisis_prog">Analisis y programación</option>
+          <option value="arquitectura">Arquitectura</option>
+          <option value="calidad">Calidad</option>
+          <option value="erp">ERP, CRM, Business Intelligence</option>
+        </select>
       </fieldset>
+      <input type="submit" name="enviar" value="Guardar Cambios" />
+      <input type="reset" name="borrar" value="Borrar los datos introducidos" />
     </form>
   </body>
 </html>
