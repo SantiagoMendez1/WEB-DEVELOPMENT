@@ -1,0 +1,30 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    background-color:#62606b;
+}
+.font-h{
+    color: #f89c25;
+    padding: 1rem;
+}
+.size-w{
+    width: 50%;
+    margin: 0 auto 1rem;
+}
+.border{
+    border-radius: 15px;
+    background-color: #dae2df;
+}
+.grid-pad{
+    display: grid;
+    grid-template-columns: 0.8fr 0.8fr;
+    grid-gap: 0.2rem;
+    padding: 2rem;
+}
+input,select {
+    border-radius: 5px;
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid;
+    border-color: #f89c25;
+}
