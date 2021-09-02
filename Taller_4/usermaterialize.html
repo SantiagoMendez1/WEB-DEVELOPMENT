@@ -1,149 +1,36 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Formulario</title>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="usermaterialize.css"
-      media="screen"
-    />
+<html lang="en">
 
-    <!-- Compiled and minified CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="user.css">
+    <title>Formulario Registro</title>
+</head>
 
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  </head>
+<body>
+    <section class="form-register">
+        <h4>Formulario Registro</h4>
+        <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
+        <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido">
+        <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
+        <h6 class="c">Ingrese el país</h6>
+        <select class="controls" name="País" placeholder="Ingrese su pais">
+            <option value="1">Colombia</option> 
+            <option value="2">Argentina</option> 
+            <option value="3">Venezuela</option>
+            <option value="10">Uruguay</option> 
+            <option value="11">Brasil</option> 
+            <option value="12">Perú</option> 
+         </select>
+        <input class="controls" type="text" name="usuario" id="usuario" placeholder="Ingrese su usuario">
+        <input class="controls" type="password" name="correo" id="correo" placeholder="Ingrese su Contraseña">
+        <input class="controls" type="tel" name="telefono" id="telefono" placeholder="Ingrese su telefono">
+        <p>Estoy de acuerdo con  y Condiciones</a></p>
+        <input class="botons" type="submit" value="Registrar">
+    </section>
 
-  <body>
-    <h2>Formulario</h2>
-    <form>
-      <div class="row">
-        <form>
-          <div class="row">
-            <div class="input-field col s2">
-              <input
-                placeholder="Usuario"
-                id="id_usr"
-                type="text"
-                class="validate"
-                maxlength="11"
-              />
-              <label for="id_usr">Usuario</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field">
-              <select>
-                <option value="" disabled selected>Pais</option>
-                <option value="1">Colombia</option>
-                <option value="2">Venezuela</option>
-                <option value="3">Brasil</option>
-                <option value="3">Peru</option>
-              </select>
-              <label>Pais</label>
-            </div>
-          </div>
-          <br />
-          <div class="row">
-            <div class="input-field col s2">
-              <input
-                placeholder="Nombre"
-                id="nombre"
-                type="text"
-                class="validate"
-                maxlength="25"
-              />
-              <label for="nombre">Nombre </label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s2">
-              <input
-                placeholder="Apellido"
-                id="apellido"
-                type="text"
-                class="validate"
-                maxlength="25"
-              />
-              <label for="apellido">Apellido</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s2">
-              <input
-                placeholder="Dirección"
-                id="direccion"
-                type="text"
-                class="validate"
-                maxlength="45"
-              />
-              <label for="direccion">Dirección</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s2">
-              <input
-                placeholder="CCUsuario"
-                id="ccusuario"
-                type="text"
-                class="validate"
-                maxlength="20"
-              />
-              <label for="ccusuario">CCUsuario</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s2">
-              <input
-                placeholder="CCPassword"
-                id="ccpaswd"
-                type="password"
-                class="validate"
-              />
-              <label for="ccpaswd">CCPassword</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s2">
-              <input
-                placeholder="Email"
-                id="email"
-                type="email"
-                class="validate"
-              />
-              <label for="email">Email</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s2">
-              <input
-                placeholder="Telefono"
-                id="telefono"
-                type="tel"
-                class="validate"
-              />
-              <label for="telefono">Telefono</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-fied col s2">
-              <form action="Perfil.html">
-                <input
-                  type="submit"
-                  value="Enviar"
-                  style="background-color: burlywood;"
-                />
-              </form>
-            </div>
-          </div>
-        </form>
-      </div>
-    </form>
-  </body>
+</body>
+
 </html>
