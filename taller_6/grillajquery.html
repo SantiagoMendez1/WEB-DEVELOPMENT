@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    $( function() {
+      $( "#slider-range" ).slider({
+        range: true,
+        min: 1000000,
+        max: 150000000,
+        values: [ 10000000, 30000000 ],
+        step: 500000,
+        slide: function( event, ui ) {
+          $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+        }
+      });
+      $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+        " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+    } );
+    </script>      
+    <title>Registro de usuarios</title>    
+</head>
+<body>
+<script type="text/javascript">
+
+  function checkPassword(str)
+  {          
+    var re =/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[#-%-/-&]).{15,20}$/;
+    return re.test(str);
+  }
+  function checkEmail(io)
+  {          
+    var re =/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[#-%-/-&]).{,120}$/;
+    return re.test(io);
+  }
+
+  function checkForm(form)
+  {       
+    if(form.nombre.value == ""){
+        alert("Error: Nombre no puede estar en blanco!");
+        form.email.focus();
+        return false;
+    }    
+    if(form.apellido.value == ""){
+        alert("Error: Apellido no puede estar en blanco!");
+        form.email.focus();
+        return false;
+    }   
+    if(form.username.value == "") {
+      alert("Error: Nombre de usuario no puede estar en blanco!");
+      form.username.focus();
+      return false;
+    }
+    if(form.email.value == ""){
+        alert("Error: Email no puede estar en blanco!");
+        form.email.focus();
+        return false;
+    }
+    re = /^\w+$/;
+    if(!re.test(form.username.value)) {
+      alert("Error: Nombre de usuario contiene caracteres incomprendidos!");
+      form.username.focus();
+      return false;
+    }
+    if(form.pwd1.value != "" && form.pwd1.value == form.pwd2.value) {
+      if(!checkPassword(form.pwd1.value)) {
+        alert("La contraseña ingresada no es válida!");
+        form.pwd1.focus();
+        return false;
+      }
+    } else {
+      alert("Error: Las contraseñas no concuerdan!");
+      form.pwd1.focus();
+      return false;
+    }
+    return true;
+  }
+  
+
+</script>
+
+<form method="POST" action="..." onsubmit="return checkForm(this);">
+<p>Nombre: <input type="text" name="nombre" maxlength="25"></p>
+<p>Apellido: <input type="text" name="apellido" maxlength="25"></p>
+<p>Dirección: <input type="text" name="direccion" placeholder="Dirección" value="Cll, Cra, Av, Anv, Trans"></p>
+<p>Usuario: <input type="text" name="username" minlength="10" maxlength="20"></p>
+<p>Contraseña: <input type="password" name="pwd1" minlength="15" maxlength="20"></p>
+<p>Confirmar contraseña: <input type="password" name="pwd2" minlength="15" maxlength="20"></p>
+<p>Email: <input type="email" name="email" maxlenght="120"></p>
+<p>Registro de gustos:<br>
+  Color favorito:<br>
+    <input type="radio" name="colorfav" value="amarillo">Amarillo 
+    <input type="radio" name="colorfav" value="rojo"> Rojo  
+    <input type="radio" name="colorfav" value="verde"> Verde  
+    <input type="radio" name="colorfav" value="azul"> Azul  
+    <input type="radio" name="colorfav" value="magenta"> Magenta   
+    <input type="radio" name="colorfav" value="cian"> Cian  
+    <input type="radio" name="colorfav" value="blanco"> Blanco<br>
+  Marca favorita:<br>
+    <input type="radio" name="marcafav" value="audi">Audi 
+    <input type="radio" name="marcafav" value="bmw">BMW 
+    <input type="radio" name="marcafav" value="ford">Ford 
+    <input type="radio" name="marcafav" value="mazda">Mazda 
+    <input type="radio" name="marcafav" value="chevrolet">Chevrolet 
+    <input type="radio" name="marcafav" value="nissan">Nissan 
+    <input type="radio" name="marcafav" value="renault">Renault<br>
+  Estilo favorito:<br>
+    <input type="radio" name="estilofav" value="familiar">Familiar  
+    <input type="radio" name="estilofav" value="todoterreno">Todoterreno  
+    <input type="radio" name="estilofav" value="cupe">Cupé  
+    <input type="radio" name="estilofav" value="sedan">Sedan  
+    <input type="radio" name="estilofav" value="cabriolet">Cabriolet
+    <p>
+      <label for="amount">Rango de precio: </label>
+      <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+    </p>
+    <div id="slider-range"></div><br>
+<p><input type="submit"></p>
+</form>
+</body>
