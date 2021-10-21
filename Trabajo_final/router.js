@@ -3,10 +3,16 @@ const router = express.Router();
 
 const pool = require('./database/db');
 
-router.get('/tipo', async(req,res)=>{
-    const response = await pool.query('SELECT * FROM tipodocumento');
-    console.log(response.rows);
-    res.send(response.rows);
+router.get('/',(req,res)=>{
+    pool.query('SELECT * FROM tipodocumento',(error,results)=>{
+        if(error){
+            throw error;
+        }else{
+            console.log(results.rows);
+            res.render('index.ejs', data={results:results.rows});
+            //res.send(results.rows);
+        }
+    })
 })
 
 module.exports= router;
