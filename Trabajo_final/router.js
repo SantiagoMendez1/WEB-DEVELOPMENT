@@ -9,10 +9,17 @@ router.get('/',(req,res)=>{
             throw error;
         }else{
             console.log(results.rows);
-            res.render('index.ejs', data={results:results.rows});
+            res.render('index', data={results:results.rows});
             //res.send(results.rows);
         }
     })
-})
+});
+
+router.get('/edit',(req,res)=>{
+    res.render('edit')
+});
+
+const crud = require('./controllers/crud');
+router.post('/save',crud.save);
 
 module.exports= router;
