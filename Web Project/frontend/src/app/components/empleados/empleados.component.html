@@ -1,0 +1,110 @@
+<div class="row">
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-body">
+                <form #empleadosForm="ngForm" (ngSubmit)="addEmpleados(empleadosForm)">
+                    <legend>Datos del empleado</legend>
+                    <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="empleadosService.selectedEmpleados._id">
+
+                    <div class="form-group">
+                        <input type="text" name="name" #name="ngModel" [(ngModel)]="empleadosService.selectedEmpleados.name" placeholder="Ingrese el nombre" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-field col-s12">
+                            <input type="text" name="apellido" #name="ngModel" [(ngModel)]="empleadosService.selectedEmpleados.apellido" placeholder="Ingrese el apellido" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-field col-s12">
+                            <label for="td">Tipo de documento</label>
+
+                            <select name="td" #name="ngModel" [(ngModel)]="empleadosService.selectedEmpleados.td" placeholder="Ingrese el documento" class="form-control">
+                          <option>CC</option>
+                          <option>TI</option>
+                          <option>CE</option>
+                          <option>NIP</option>
+                        </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-field col-s12">
+                            <label for="documento">Numero de documento</label>
+                            <input type="number" name="documento" #name="ngModel" [(ngModel)]="empleadosService.selectedEmpleados.documento" placeholder="Ingrese el documento" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-field col-s12">
+                            <label for="telefono">Numero de telefono</label>
+                            <input type="number" name="telefono" #name="ngModel" [(ngModel)]="empleadosService.selectedEmpleados.telefono" placeholder="Ingrese el telefono" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="ciudad" #name="ngModel" [(ngModel)]="empleadosService.selectedEmpleados.ciudad" placeholder="Ingrese la ciudad" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="birthday">Fecha de nacimiento</label>
+                        <input type="date" name="birthday" #name="ngModel" [(ngModel)]="empleadosService.selectedEmpleados.birthday" placeholder="Ingrese Fecha de Nacimiento" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-field col-s12">
+                            <input type="email" name="email" #name="ngModel" [(ngModel)]="empleadosService.selectedEmpleados.email" placeholder="Ingrese el email" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" name="usuario" #name="ngModel" [(ngModel)]="empleadosService.selectedEmpleados.usuario" placeholder="Ingrese el usuario" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password" #name="ngModel" [(ngModel)]="empleadosService.selectedEmpleados.password" placeholder="Ingrese su password" class="form-control">
+                    </div>
+
+
+                    <button type="button" class="btn btn-secondary btn-sm mr-1" (click)="resetForm(empleadosForm)">Borrar</button>
+                    <button type="button" class="btn btn-outline-success btn-sm " (click)="addEmpleados(empleadosForm)">Guardar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-9">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>T. Doc</th>
+                    <th>Documento</th>
+                    <th>Ciudad</th>
+                    <th>Birthday</th>
+                    <th>Telefono</th>
+                    <th>Email</th>
+                    <th>Usuario</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let empleados of empleadosService.empleados">
+                    <td>{{empleados.name}}</td>
+                    <td>{{empleados.apellido}}</td>
+                    <td>{{empleados.td}}</td>
+                    <td>{{empleados.documento}}</td>
+                    <td>{{empleados.ciudad}}</td>
+                    <td>{{empleados.birthday | date: 'dd-MM-yyyy'}}</td>
+                    <td>{{empleados.telefono}}</td>
+                    <td>{{empleados.email}}</td>
+                    <td>{{empleados.usuario}}</td>
+                    <td>
+                        <a (click)="editEmpleados(empleados)" class="btn btn-secondary btn-sm">
+                            <i class="material-icons">edit</i>
+                        </a>
+                        <a (click)="deleteEmpleados(empleados._id, empleadosForm)" class="btn btn-outline-danger btn-sm">
+                            <i class="material-icons">delete</i>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

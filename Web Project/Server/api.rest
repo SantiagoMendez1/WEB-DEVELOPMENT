@@ -1,0 +1,29 @@
+###
+GET http://localhost:4000/api/empleados
+###
+POST http://localhost:4000/api/empleados
+Content-Type: application/json
+
+{
+    "name": "Jose Luis", 
+    "apellido": "Soto",
+    "td": "CC",
+    "documento": "1005231565",
+    "ciudad": "Piedecuesta", 
+    "birthday": "2001,4,19",
+    "email": "jose@gmail.com",
+    "telefono": "3144079049",
+    "usuario": "Sotoro19",
+    "password": "aaa"
+    
+}
+
+###
+GET http://localhost:4000/api/empleados/6036cfdf5e8b972b840f7927
+
+###
+DELETE http://localhost:4000/api/empleados/6036cfdf5e8b972b840f7927
+
+###
+PUT http://localhost:4000/api/empleados/6036cfdf5e8b972b840f7927
+Content-Type: application/json
