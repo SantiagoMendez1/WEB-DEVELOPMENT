@@ -1,0 +1,71 @@
+<div class="container mt-4">
+    <form action="/insertar" method="post">
+        <div class="form-group">
+            <label>Nombres</label>
+            <input type="text" class="form-control" id="names" name="names">
+        </div>
+        <div class="form-group">
+            <label>Apellidos</label>
+            <input type="text" class="form-control" id="ape" name="ape">
+        </div>
+        <div class="form-group">
+            <label >Tipo documento</label>
+            <select class="form-control" id="tipodoc" name="tipooc">
+                <option value="1">Cedula de ciudadanía</option>
+                <option value="2">Tarjeta de identidad</option>
+                <option value="3">Pasaporte</option>
+            </select>
+          </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Número de documento</label>
+            <input type="text" class="form-control" id="doc" name="doc">
+        </div>
+        <div class="form-group">
+            <label>Ciudad</label>
+            <select class="form-control" id="ciudades" name="ciudades">
+                <option value="1">Bucaramanga</option>
+                <option value="2">Floridablanca</option>
+                <option value="3">Bogota</option>
+                <option value="4">Medellin</option>
+                <option value="5">Cucuta</option>
+                <option value="6">Santa Marta</option>
+                <option value="7">Monteria</option>
+                <option value="8">Cartagena</option>
+                <option value="9">Sincelejo</option>
+                <option value="10">Barranquilla</option>
+                <option value="11">Tunja</option>
+                <option value="12">Valledupar</option>
+                <option value="13">Manizales</option>
+                <option value="14">Pererira</option>
+                <option value="15">Ibague</option>
+                <option value="16">Neiva</option>
+                <option value="17">Quibdo</option>
+                <option value="18">Leticia</option>
+                <option value="19">Barrancabermeja</option>
+                <option value="20">Pasto</option>
+                <option value="21">Cali</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Fecha Nacimiento</label>
+            <input type="date" class="form-control" id="fecha" name="fecha">
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" class="form-control" id="mail" name="mail">
+        </div>
+        <div class="form-group">
+            <label >Telefono</label>
+            <input type="text" class="form-control" id="tel" name="tel">
+        </div>
+        <div class="form-group">
+            <label >Usuario</label>
+            <input type="text" class="form-control" id="user" name="user">
+        </div>
+        <div class="form-group">
+            <label >Contraseña</label>
+            <input type="text" class="form-control" id="pass" name="pass">
+        </div>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+      </form>
+</div>

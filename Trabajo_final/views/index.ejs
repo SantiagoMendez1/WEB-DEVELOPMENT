@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
+    <title>Registro</title>
+</head>
+<body>
+<<<<<<< HEAD
+    <div class="container mt-4">
+        <form action="/save" method="post">
+            <div class="form-group">
+                <label>Nombres</label>
+                <input type="text" class="form-control" id="names">
+            </div>
+            <div class="form-group">
+                <label>Apellidos</label>
+                <input type="text" class="form-control" id="ape">
+            </div>
+            <div class="form-group">
+                <label >Tipo documento</label>
+                <select class="form-control" id="tipodoc">
+                    <option value="1">Cedula de ciudadanía</option>
+                    <option value="2">Tarjeta de identidad</option>
+                    <option value="3">Pasaporte</option>
+                </select>
+              </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Número de documento</label>
+                <input type="text" class="form-control" id="doc">
+            </div>
+            <div class="form-group">
+                <label>Ciudad</label>
+                <select class="form-control" id="ciudades">
+                    <option value="1">Bucaramanga</option>
+                    <option value="2">Floridablanca</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Fecha Nacimiento</label>
+                <input type="date" class="form-control" id="fecha">
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" class="form-control" id="mail">
+            </div>
+            <div class="form-group">
+                <label >Telefono</label>
+                <input type="text" class="form-control" id="tel">
+            </div>
+            <div class="form-group">
+                <label >Usuario</label>
+                <input type="text" class="form-control" id="user">
+            </div>
+            <div class="form-group">
+                <label >Contraseña</label>
+                <input type="password" class="form-control" id="pass">
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+          </form>
+    </div>
+=======
+    <a href="/create"><button class="btn btn-primary">Agregar</button></a>
+>>>>>>> parent of 5452baa... sss
+    <div class="container mt-4">
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+<<<<<<< HEAD
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Descripcion</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">nombre doc</th>
+=======
+                    <th scope="col">Nombres</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">Tipo documento</th>
+                    <th scope="col">Numero Documento</th>
+                    <th scope="col">Ciudad</th>
+                    <th scope="col">Fecha Nacimiento</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Telefono</th>
+                    <th scope="col">User</th>
+                    <th scope="col">Password</th>
+>>>>>>> parent of 5452baa... sss
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <% results.forEach((tipo)=> { %>
+                <tr>
+                    <th><%= tipo.id %></th>
+                    <th><%= tipo.nombres %></th>
+                    <th><%= tipo.apellidos %></th>
+<<<<<<< HEAD
+                    <th><%= tipo.idtipodocumento %></th>
+                    <th><%= tipo.documento %></th>
+                    <th><%= tipo.ciudad %></th>
+=======
+                    <th><%= tipo.nombre %></th>
+                    <th><%= tipo.documento %></th>
+                    <th><%= tipo.nombre %></th>
+>>>>>>> parent of 5452baa... sss
+                    <th><%= tipo.fechanacimiento %></th>
+                    <th><%= tipo.email %></th>
+                    <th><%= tipo.telefono %></th>
+                    <th><%= tipo.usuario %></th>
+                    <th><%= tipo.contrasena %></th>
+                    <th><%= tipo.nombre%></th>
+                    <th>
+                        <a href="/edit">EDIT</a>
+                    </th>
+                </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
